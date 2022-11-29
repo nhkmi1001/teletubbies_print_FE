@@ -1,10 +1,8 @@
 
 const backend_base_url = 'http://127.0.0.1:8000'
 const output_id = localStorage.getItem('output_id')
-console.log(output_id)
 window.onload = async function getOutputImg(){
     const detailData = async () => {
-    console.log(output_id)
     const response = await fetch(`http://127.0.0.1:8000/store/images/${output_id}/`,{
         headers: {
             'Content-Type': 'application/json',
@@ -18,11 +16,8 @@ window.onload = async function getOutputImg(){
     detail = data
     detail_img = detail['output_img']
     comment = detail['comment_set']
-    console.log(detail)
-    console.log(comment)
     for (let i=0; i < comment.length; i++){
         let detail_comment = comment[i]['content']
-        console.log(detail_comment)
         let temp_html = `
         <style>
         .comments{
@@ -51,4 +46,21 @@ window.onload = async function getOutputImg(){
 
     
   })
+}
+
+
+async function create_commnet(){
+    const content = document.getElementById('input_comment').value
+
+    const response = await fetch (`http://127.0.0.1:8000/store/images/${output_id}/`,{
+        headers : {
+            'Authorization' : 'Bearer ' + localStorage.getItem('access'),
+            'content-type' : 'application/json',
+        },
+        method : 'POST',
+        body : JSON.stringify({
+            "content": content,
+        })
+    })
+    window.location.replace('imgdetail.html')
 }

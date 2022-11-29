@@ -9,8 +9,7 @@ const userId = personObj['user_id']
 
 
 window.onload = async function MyPage(){
-    console.log(1)
-    console.log(userId)
+
     const MyData = async () => {
         const response = await fetch(`${backend_base_url}users/${userId}`,{
             method: 'GET',
@@ -23,21 +22,23 @@ window.onload = async function MyPage(){
     }
     MyData().then((data) => {
         user = data.image_set
-        console.log(user)
         for (let i=0; i < user.length; i++) {
            let img_set = user[i]['output_img']
-           console.log(img_set)
 
             let temp_html = `
                     <!-- 내가 선택한 사진들 -->
-                    <div class="user" id="${img_set}">
-                        <img src="http://127.0.0.1:8000${img_set}">
+                    <div class="user"  id="${img_set}" onclick="page2detail()" >
+                        <img src="http://127.0.0.1:8000${img_set}" ">
                     </div>
         
             `
             $('#user_box').append(temp_html)
         }
     })
+}
+
+function page2detail(){
+    window.location.href = "./imgdetail.html"
 }
 
 //#로그아웃//

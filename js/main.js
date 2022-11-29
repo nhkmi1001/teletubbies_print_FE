@@ -17,12 +17,9 @@ window.onload = async function GotoOptionPage(){
     
     filterData().then((data) => {
         filter = data
-        console.log(filter)
         for (let i=0; i < filter.length; i++){
             let id = filter[i]['id']
             let filter_image = filter[i]['filter_image']
-            console.log("이고",filter[i]['id'])
-            console.log(filter[i]['filter_image'])
 
             let temp_html = `
                     <!-- 게시글 -->

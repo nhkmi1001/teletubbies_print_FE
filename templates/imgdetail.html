@@ -21,12 +21,13 @@
       </div>
       <div class="navbar">
           <a class="logo" href="#">
-          <img src="images/logo.png" height="20px">
+          <img src="" height="20px">
           </a>
           <ul>
-              <li><a href="../templates/mypage.html">Mypage</a></li>
-              <li><a href="../templates/main.html">Home</a></li>
-              <li><a href="../templates/login.html">Logout</a></li>
+            <li><a href="../templates/mypage.html">Mypage</a></li>
+            <li><a href="../templates/main.html">Home</a></li>
+            <li><a href="../templates/login.html" onclick="logout()">Logout</a></li>
+    
           </ul>
       </div>
       <div style="width:100%;height:600px;position:relative;">
@@ -40,7 +41,7 @@
             <div class="form-floating mb-3" id = 'comment_box'>
                 <div id = 'detail-box'></div>
                 <input type="text" class="form-control" id="input_comment" placeholder="COMMENT" >
-                <button type="button" class="btn btn-outline-dark" onclick="handleAddItem()">댓글 작성</button>
+                <button type="button" class="btn btn-outline-dark" onclick="create_commnet()">댓글 작성</button>
             </div>  
       </div>
          <!-- JQuery -->

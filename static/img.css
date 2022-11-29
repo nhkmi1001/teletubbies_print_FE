@@ -1,68 +1,67 @@
 .navbar_top{
-    background-color: #F79999;
-    border: 1px solid #F79999;
+  background-color: #F79999;
+  border: 1px solid #F79999;
 
-  }
+}
 
-  .navbar_top p{
-    text-align: center;
-    font-size: 25px;
-    font-weight: bold;
-  }
+.navbar_top p{
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
 
-  .navbar{
-    height: 60px;
-    padding-left: 30px;
-    border: 1px solid #F9C4C4;
-    background-color: #F9C4C4;
-  }
+.navbar{
+  height: 60px;
+  padding-left: 30px;
+  border: 1px solid #F9C4C4;
+  background-color: #F9C4C4;
+}
 
-  .navbar ul{
-    float: right;
-  }
+.navbar ul{
+  float: right;
+}
 
-  .navbar li{
-    list-style-type: none;
-    float: left;
-    margin-right: 30px;
-  }
+.navbar li{
+  list-style-type: none;
+  float: left;
+  margin-right: 30px;
+}
 
-  .navbar a{
-    text-decoration: none;
-    color: black;
-    font-style: bold;
-    font-size: 13px;
-  }
-  /* 네비 css end */
-  .modal_window1 {
-    background: white;
-    backdrop-filter: blur(13.5px);
-    -webkit-backdrop-filter: blur(13.5px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    width: 500px;
-    height: 500px;
-    position: relative;
-    padding: 10px;
-    float: left;
-    margin-left: 80px;
-    margin-top: 200px;
-  }
+.navbar a{
+  text-decoration: none;
+  color: black;
+  font-style: bold;
+  font-size: 13px;
+}
+/* 네비 css end */
+.modal_window1 {
+  background: white;
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 500px;
+  height: 500px;
+  position: relative;
+  padding: 10px;
+  float: left;
+  margin-left: 400px;
+  margin-top: 200px;
+}
 
-  .modal_window2 {
-    background: white;
-    backdrop-filter: blur(13.5px);
-    -webkit-backdrop-filter: blur(13.5px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    width: 500px;
-    height: 500px;
-    position:relative;
-    padding: 10px;
-    float: right;
-    margin-right: 80px;
-    
-  }
+.modal_window2 {
+  background: white;
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 500px;
+  height: 500px;
+  position:relative;
+  padding: 10px;
+  float: right;
+  margin-right: 400px;
+}
 .fa-solid fa-forward fa-1x{
-  margin-left: 50px;
+margin-left: 50px;
 }

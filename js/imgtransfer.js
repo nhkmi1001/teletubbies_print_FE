@@ -3,7 +3,6 @@ const backend_base_url = 'http://127.0.0.1:8000/'
 
 
 const filterId = localStorage.getItem('filter_id')
-console.log(filterId)
 
 function setCookie(cookieName, cookieValue, cookieExpire, cookiePath, cookieDomain, cookieSecure){
     var cookieText=escape(cookieName)+'='+escape(cookieValue);
@@ -39,11 +38,9 @@ async function getFilter(){
         method:'GET',
     })
     data = await response.json()
-    console.log(data)
     
 
     let click_image = data['filter_image']
-    console.log(data['filter_image'])
 
     let temp_html = `
     <div class="image-container">
@@ -75,9 +72,7 @@ fileInput.addEventListener("change", handleFiles)
 
 async function transferML(){
     const image=document.getElementById("InputImg").files[0]
-    console.log(image)
     const formData = new FormData();
-    console.log("52",formData)
 
     formData.append('input_img', image);
 
@@ -94,7 +89,6 @@ async function transferML(){
 
     if (response.status ==200){
 
-        console.log("불러오기", response)
 
         window.location.replace('imglist.html');
 
